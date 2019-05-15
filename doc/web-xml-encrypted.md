@@ -21,7 +21,7 @@
         <filter-class>com.dengshaolin.cas.filter.AuthenticationFilter</filter-class>
         <init-param>
             <param-name>serverName</param-name>
-            <param-value>https://cas-ip</param-value>
+            <param-value>https://sp-ip</param-value>
         </init-param>
         <init-param>
             <param-name>redirectAfterValidation</param-name>

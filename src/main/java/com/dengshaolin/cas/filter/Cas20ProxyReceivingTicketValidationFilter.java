@@ -136,8 +136,9 @@ public class Cas20ProxyReceivingTicketValidationFilter extends AbstractTicketVal
         final String allowedProxyChains = getPropertyFromInitParams(filterConfig, "allowedProxyChains", null);
         final boolean urlEncrypted = parseBoolean(getPropertyFromInitParams(filterConfig, "urlEncrypted", "false"));
         final String encryptCls = getPropertyFromInitParams(filterConfig, "decryptor", null);
+        final String casUrlKey = getPropertyFromInitParams(filterConfig, "casUrlKey", "cas_url");
         final String key = getPropertyFromInitParams(filterConfig, "key", null);
-        final String casUrlInUrl = request.getParameter("cas_url");
+        final String casUrlInUrl = request.getParameter(casUrlKey);
 
         String casServerUrlPrefix = "";
         if (urlEncrypted) {

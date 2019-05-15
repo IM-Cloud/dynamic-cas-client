@@ -47,6 +47,8 @@ public class AuthenticationFilter extends AbstractCasFilter {
      */
     private boolean gateway = false;
 
+    private String casUrlKey = null;
+
     private boolean urlEncrypted = true;
 
     private Decrypt decryptor = null;
@@ -64,6 +66,8 @@ public class AuthenticationFilter extends AbstractCasFilter {
             log.trace("Loaded renew parameter: " + this.renew);
             setGateway(parseBoolean(getPropertyFromInitParams(filterConfig, "gateway", "false")));
             log.trace("Loaded gateway parameter: " + this.gateway);
+            setCasUrlKey(getPropertyFromInitParams(filterConfig, "casUrlKey", "cas_url"));
+            log.trace("Loaded casUrlKey parameter: " + this.casUrlKey);
             setUrlEncrypted(parseBoolean(getPropertyFromInitParams(filterConfig, "urlEncrypted", "false")));
             setKey(getPropertyFromInitParams(filterConfig, "key", null));
 
@@ -129,7 +133,7 @@ public class AuthenticationFilter extends AbstractCasFilter {
             log.debug("Constructed service url: " + modifiedServiceUrl);
         }
 
-        String casUrlInUrl = request.getParameter("cas_url");
+        String casUrlInUrl = request.getParameter(casUrlKey);
         if (CommonUtils.isBlank(casUrlInUrl))
         {
             log.error("cas url not provide, could not redirect to login");
@@ -180,7 +184,11 @@ public class AuthenticationFilter extends AbstractCasFilter {
 //    public final void setCasServerLoginUrl(final String casServerLoginUrl) {
 //        this.casServerLoginUrl = casServerLoginUrl;
 //    }
-    
+
+    public void setCasUrlKey(String casUrlKey) {
+        this.casUrlKey = casUrlKey;
+    }
+
     public final void setGatewayStorage(final GatewayResolver gatewayStorage) {
         this.gatewayStorage = gatewayStorage;
     }
