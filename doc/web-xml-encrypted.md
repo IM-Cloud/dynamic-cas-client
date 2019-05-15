@@ -28,6 +28,10 @@
             <param-value>true</param-value>
         </init-param>
         <init-param>
+            <param-name>casUrlKey</param-name>
+            <param-value>cas_url</param-value>
+        </init-param>
+        <init-param>
             <param-name>urlEncrypted</param-name>
             <param-value>true</param-value>
         </init-param>
@@ -48,6 +52,10 @@
         <init-param>
             <param-name>serverName</param-name>
             <param-value>https://sp-ip</param-value>
+        </init-param>
+        <init-param>
+            <param-name>casUrlKey</param-name>
+            <param-value>cas_url</param-value>
         </init-param>
         <init-param>
             <param-name>urlEncrypted</param-name>
