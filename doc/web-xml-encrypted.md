@@ -1,4 +1,4 @@
-����: 
+访问:
 
 `https://sp-ip/index/?cas_url=GEGKf1cvvuZdohJN5JhOpurqEdNagGJdwMoVsrmtf2tsncDDdHmr4UpiOgKGsedqJ7qOA0xet31iifXDcpkzTqvqbv35e3%2B9htDoYfSSppmRDNrp8bapNGueutyArYRsOSKLmXJi3ixEZ1KbgnYCeBwp4ppv8rlx3f08g5%2BlI5wkMP1F4Unt%2BIiEVXNbUBRg1hkAT4PD0g8kZJEe2RJkdz5Lazvf10bgg3M7OS4bc7QHOQz0ui%2Bq2zsR3M6oGrLgH8LnFNUykvJqOSpl1YzcHTZ03qmELpzS5SFNcBKUvML4XBBFI9qDBbpN7jsyYCr1KzapwitNFCDT8mUhD%2FAuzw%3D%3D`
 
@@ -113,9 +113,16 @@
 </web-app>
 ```
 
-���滻������ر�����
+请替换以上相关变量：
 
 ```text
-cas-ip: cas���ڷ�������ַ
-sp-ip������ip
+cas-ip: cas所在服务器地址
+sp-ip：服务ip
+```
+
+其他参数
+
+```text
+casUrlKey: 根据情况修改
+key:       请替换为实际的解密公钥
 ```

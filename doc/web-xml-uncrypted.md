@@ -1,4 +1,4 @@
-访问:
+璁块棶:
 
 `https://sp-ip/index/?cas_url=https://cas-ip/cas`
 
@@ -81,9 +81,9 @@
 </web-app>
 ```
 
-请替换以上相关变量：
+璇锋浛鎹互涓婄浉鍏冲彉閲忥細
 
 ```text
-cas-ip: cas所在服务器地址
-sp-ip：服务ip
+cas-ip: cas鎵�鍦ㄦ湇鍔″櫒鍦板潃
+sp-ip锛氭湇鍔p
 ```

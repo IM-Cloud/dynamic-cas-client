@@ -19,10 +19,10 @@ public class RSADecrypt implements Decrypt {
     public static final Charset UTF8 = Charset.forName("UTF-8");
 
     /**
-     * ´Ó×Ö·û´®ÖĞ¼ÓÔØ¹«Ô¿
-     * @param publicKeyStr ¹«Ô¿Êı¾İ×Ö·û´®
-     * @return RSA¹«Ô¿
-     * @throws Exception ¼ÓÔØ¹«Ô¿Ê±²úÉúµÄÒì³£
+     * ä»å­—ç¬¦ä¸²ä¸­åŠ è½½å…¬é’¥
+     * @param publicKeyStr å…¬é’¥æ•°æ®å­—ç¬¦ä¸²
+     * @return RSAå…¬é’¥
+     * @throws Exception åŠ è½½å…¬é’¥æ—¶äº§ç”Ÿçš„å¼‚å¸¸
      */
     public RSAPublicKey loadPublicKeyFromStr(String publicKeyStr)
             throws Exception {
@@ -41,11 +41,11 @@ public class RSADecrypt implements Decrypt {
     }
 
     /**
-     * ¹«Ô¿½âÃÜ
-     * @param publicKey ¹«Ô¿
-     * @param cipherData ÃÜÎÄ
-     * @return Ã÷ÎÄ
-     * @throws Exception ½âÃÜ¹ı³ÌÖĞµÄÒì³£ĞÅÏ¢
+     * å…¬é’¥è§£å¯†
+     * @param publicKey å…¬é’¥
+     * @param cipherData å¯†æ–‡
+     * @return æ˜æ–‡
+     * @throws Exception è§£å¯†è¿‡ç¨‹ä¸­çš„å¼‚å¸¸ä¿¡æ¯
      */
     public byte[] decrypt(RSAPublicKey publicKey, byte[] cipherData)
             throws Exception {
